@@ -5,6 +5,7 @@ import Link from "next/link"
 import { siteConfig, SiteConfig } from "@/config/site"
 import { Categories } from "@/components/categories"
 
+import { ThemeToggle } from "./theme-toggle"
 import { ScrollArea, ScrollBar } from "./ui/scroll-area"
 import { H1 } from "./ui/typography"
 
@@ -16,6 +17,7 @@ export function SiteHeader() {
       </H1>
       <ScrollArea className="whitespace-nowrap">
         <Categories />
+        <ThemeToggle />
         <ScrollBar orientation="horizontal" className="md:hidden" />
       </ScrollArea>
     </header>
