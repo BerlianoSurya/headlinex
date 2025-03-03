@@ -8,7 +8,6 @@ const CategoryPage = async ({
   params: { name: Category }
 }) => {
   const headlines = await fetchHeadlines({ category: name })
-  console.log(headlines)
   return <NewsPage articles={headlines} />
 }
 export default CategoryPage

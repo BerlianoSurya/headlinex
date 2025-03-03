@@ -29,19 +29,17 @@ export const ArticleLink = ({
       <SheetTrigger className="text-left hover:text-orange-700">
         {children}
       </SheetTrigger>
-      <SheetContent className="grid px-4 gap-4 pt-16 data-[state=closed]:spin-out-6 data-[state=open]:spin-in-6">
+      <SheetContent className="grid px-4 overflow-scroll gap-4 pt-16 data-[state=closed]:spin-out-6 data-[state=open]:spin-in-6">
         <SheetHeader>
           <SheetTitle className="text-xl">{article.title}</SheetTitle>
           <SheetDescription>{article.description}</SheetDescription>
         </SheetHeader>
-        <div>
-          <ArticleImage
-            src={article.urlToImage}
-            title={article.title}
-            ratio="tall"
-          />
-          <Paragraph>{article.content}</Paragraph>
-        </div>
+        <ArticleImage
+          src={article.urlToImage}
+          title={article.title}
+          ratio="tall"
+        />
+        <Paragraph>{article.content}</Paragraph>
         <SheetFooter className="mb-15">
           <Link
             href={article.url}
