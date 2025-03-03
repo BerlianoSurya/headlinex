@@ -7,11 +7,11 @@ import { AspectRatio } from "./ui/aspect-ratio"
 const ArticleImage = ({
   title,
   src,
-  ratio,
+  ratio = "wide",
 }: {
   title: string
   src: string
-  ratio: "tall" | "wide"
+  ratio?: "tall" | "wide"
 }) => {
   return (
     <AspectRatio ratio={ratio === "tall" ? 4 / 3 : 16 / 9}>

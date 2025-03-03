@@ -10,7 +10,9 @@ export const fetchHeadlines = async ({
   )
   const articles = (await request.json()) as { articles: Array<Article> }
 
-  return articles.articles.filter(
-    ({ title, urlToImage }) => title !== "[Removed]" && urlToImage
+  return (
+    articles?.articles?.filter(
+      ({ title, urlToImage }) => title !== "[Removed]" && urlToImage
+    ) || []
   )
 }

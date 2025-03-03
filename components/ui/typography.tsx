@@ -13,7 +13,7 @@ export const H1 = ({
     <h1
       className={cn(
         className,
-        "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl"
+        "scroll-m-22 font-serif  text-4xl font-extrabold tracking-tight lg:text-5xl lg:leading-relaxed"
       )}
     >
       {children}
@@ -32,7 +32,7 @@ export const H2 = ({
     <h2
       className={cn(
         className,
-        "scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+        "scroll-m-20 border-b pb-2 text-3xl font-semibold leading-12 tracking-tight first:mt-0"
       )}
     >
       {children}
@@ -111,7 +111,11 @@ export const Large = ({
   children: ReactNode
   className?: string
 }) => {
-  return <p className={cn(className, "text-lg font-semibold")}>{children}</p>
+  return (
+    <p className={cn(className, "ext-lg leading-8 font-light font-serif")}>
+      {children}
+    </p>
+  )
 }
 
 export const Small = ({
@@ -162,6 +166,6 @@ export const List = ({
   className?: string
 }) => {
   return (
-    <ul className={cn(className, "ml-6 list-disc [:>li]:mt-2")}>{children}</ul>
+    <ul className={cn(className, "ml-6 list-disc [&>li]:mt-2")}>{children}</ul>
   )
 }

@@ -37,7 +37,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body
           className={cn(
-            "min-h-screen bg-sky-50 font-sans antialiased",
+            "min-h-screen bg-white dark:bg-gray-950 font-sans antialiased",
             fontSans.variable
           )}
         >
@@ -45,7 +45,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <div className="relative flex min-h-screen flex-col bg-background md:mx-16">
               <SiteHeader />
               <div className="flex-1">
-                <div className="mx-auto grid gap-16 md:py-16 lg:max-w-6xl max-w-2xl">
+                <div className="mx-auto grid gap-16 md:py-16 lg:max-w-6xl ">
                   {children}
                 </div>
               </div>
